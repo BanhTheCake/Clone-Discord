@@ -9,6 +9,9 @@ html {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
+.header {
+  overflow: hidden;
+}
 
 .btn {
   outline: none;
@@ -18,6 +21,8 @@ html {
   background-color: white;
   border-radius: 100em;
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
   cursor: pointer;
   transition: 0.2s;
@@ -49,6 +54,7 @@ html {
   background-size: contain;
   color: white;
   position: relative;
+  padding: 0 4rem;
 }
 
 .header-img {
@@ -109,6 +115,16 @@ html {
 .navbar-link:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.narbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-btn {
+  flex-shrink: 0;
 }
 
 .navbar-btn:hover {

@@ -1,0 +1,156 @@
+@media (min-width: 1024px) {
+  .narbar-menu input {
+    display: none;
+  }
+  .navbar-menu-list {
+    display: none;
+  }
+  .narbar-menu-btn {
+    display: none;
+  }
+  .header-menu-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .header-img {
+    background-position: left bottom;
+  }
+  .header-img-left {
+    display: none;
+  }
+  .header-img-right {
+    transform: translateX(45%);
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+  .navbar-list {
+    display: none;
+  }
+
+  .narbar-menu-btn {
+    font-size: 4rem;
+    cursor: pointer;
+  }
+
+  .header-menu-mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 330px;
+  }
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    animation: FadeInMe 0.2s linear;
+    display: none;
+  }
+  .navbar-menu-mobile {
+    position: relative;
+    background-color: white;
+    border-radius: 8px 0 0 8px;
+    color: #23272a;
+    padding: 2.4rem 4.8rem 12rem 3rem;
+    height: 100vh;
+    animation: FadeInRightMe 0.2s linear;
+    display: none;
+  }
+  @keyframes FadeInMe {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes FadeInRightMe {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  .header-menu-mobile input:checked ~ .overlay {
+    display: block;
+  }
+  .header-menu-mobile input:checked ~ .navbar-menu-mobile {
+    display: block;
+  }
+
+  .navbar-menu-mobile svg {
+    cursor: pointer;
+  }
+  .navbar-menu-list {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ccc;
+    list-style: none;
+  }
+  .navbar-menu-link {
+    display: block;
+    padding: 1.4rem 2rem;
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #23272a;
+    border-radius: 4px;
+  }
+
+  .navbar-menu-item:hover .navbar-menu-link {
+    text-decoration: underline;
+  }
+
+  .navbar-menu-link.active {
+    color: #00b0f4;
+    background-color: #f6f6f6;
+  }
+  .navbar-mobile-btn {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #5865f2;
+    color: white;
+    width: 80%;
+    font-size: 1.6rem;
+  }
+  .navbar-mobile-btn ion-icon {
+    transform: scale(1.5);
+  }
+  .navbar-mobile-btn:hover {
+    background-color: hsl(235, 86.1%, 71.8%);
+  }
+  .navbar-menu-close {
+    position: absolute;
+    top: 1.4rem;
+    right: 1rem;
+    padding: 1rem;
+    font-size: 3rem;
+    cursor: pointer;
+  }
+  .header-content {
+    text-align: left;
+  }
+  .header-title {
+    padding: 0;
+    padding-right: 6rem;
+    font-size: 6rem;
+    margin-bottom: 2rem;
+  }
+  .header-content-btn {
+    margin-top: 3rem;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 739px) {
+  /* CSS */
+}

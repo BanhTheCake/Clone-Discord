@@ -34,6 +34,7 @@
   .narbar-menu-btn {
     font-size: 4rem;
     cursor: pointer;
+    margin-left: 1rem;
   }
 
   .header-menu-mobile {
@@ -43,12 +44,15 @@
     left: 0;
     bottom: 0;
     pointer-events: none;
+    z-index: 2;
   }
   .overlay {
-    position: fixed;
-    inset: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: -1;
     animation: FadeInMe 0.2s linear;
     display: none;
     pointer-events: all;
@@ -59,13 +63,15 @@
     border-radius: 0 0 8px 8px;
     color: #23272a;
     padding: 2.4rem 4.8rem 12rem 3rem;
-    height: 500px;
-    width: 100%;
+    height: 550px;
+    width: 400px;
+    max-height: 100%;
     top: 0;
     right: 0;
     animation: FadeInRightMe 0.2s linear;
     display: none;
-    z-index: 10;
+    z-index: 20;
+    pointer-events: all;
   }
   @keyframes FadeInMe {
     from {
@@ -100,6 +106,8 @@
     padding-top: 1rem;
     border-top: 1px solid #ccc;
     list-style: none;
+    max-height: 80%;
+    overflow-y: scroll;
   }
   .navbar-menu-link {
     display: block;
@@ -156,6 +164,10 @@
     align-items: flex-start;
     flex-direction: column;
   }
+  .header-content-btn--right {
+    margin: 0;
+    margin-top: 2rem;
+  }
   .footer-social-title {
     text-align: center;
   }
@@ -175,6 +187,12 @@
 }
 
 @media (max-width: 739px) {
+  .btn {
+    font-size: 1.4rem;
+  }
+  .btn .btn-icon {
+    margin-right: 1rem;
+  }
   .header-img {
     background-image: none;
   }
@@ -190,24 +208,36 @@
     display: block;
     bottom: 0;
     left: 0;
-    transform: translateX(-30%) scale(0.7);
+    transform: translateX(30%) scale(0.7);
     transform-origin: bottom;
   }
   .header-img-right {
     display: none;
+  }
+  .navbar-menu-mobile {
+    width: 100%;
   }
   .main-content {
     padding: 6rem 2rem;
     padding-bottom: 4rem;
   }
   .main-content-title {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
     margin-top: 2rem;
+  }
+  .main-content-des {
+    font-size: 1.8rem;
   }
   .star-title {
     text-align: center;
   }
   .footer {
     padding: 7rem 2rem;
+  }
+  .footer-text-link {
+    font-size: 1.6rem;
+  }
+  .footer-text-header {
+    font-size: 2rem;
   }
 }

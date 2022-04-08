@@ -107,7 +107,7 @@
     border-top: 1px solid #ccc;
     list-style: none;
     max-height: 80%;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
   .navbar-menu-link {
     display: block;
